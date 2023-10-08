@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+
+}
+
+body {
+
+    background-color: black;
+
+}
+
+.header {
+    height: 100vh;
+}
+
+.video-background {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+h1 {
+    font-family: 'Rock Salt', cursive;
+    position: absolute;
+    color:#ECEDF2;
+    top: 25%;
+    left: 5%;
+    font-size: 5rem;
+    text-shadow: #808080 3px 2px;
+    z-index: 1;
+
+}
+h1:hover{
+    transition: all .5s;
+    transform : translateX(10px);
+}
+.character-o:hover {
+    color:  #D3D3D3;
+    text-shadow:#808080 5px 5px;
+}
+
+.character-o {
+    color: #FBAFDA;
+}
+
+h3 {
+    position: absolute;
+    color: #D3D3D3;
+    top: 45%;
+    left: 5%;
+    font-size: 4rem;
+
+
+}
+
+h5 {
+    position: absolute;
+    color: #D3D3D3;
+    bottom: 40%;
+    left: 5%;
+    font-size: 1rem;
+
+}
+
+
+.lyrics-1 {
+    margin: 1%;
+    color: #FBAFDA;
+    font-size: 25px;
+    position: absolute;
+    top: 6%;
+    left: 33%;
+    line-height: 35px;
+
+    
+}
+.lyrics-1:hover{
+
+    transition: all .5s;
+    transform : translateY(-10px);
+}
+
+p::first-letter {
+    font-size: 4rem;
+    color: #FBAFDA;
+
+}
+
+.song-btn li {
+    padding: 2%;
+    list-style-type: none;
+}
+ul {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 4%;
+    bottom: 20%;
+}
+.hook {
+    font-size: 40px;
+    color: #D3D3D3;
+}
+.smoke{
+    color: #808080;
+    font-family: 'Rock Salt', cursive;
+    font-size: 40px;
+}
+.repeat-lyrics{
+    font-size: 35px;
+    color: #D3D3D3;
+}
+
+audio {
+    padding: 0;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #D3D3D3;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: #808080;
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-current-time-display {
+    color: #333;
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+    color: #333;
+}
+
+audio::-webkit-media-controls-timeline {
+    border-radius: 40px;
+    background-color: #FBC3E4;
+}
+
+audio::-webkit-media-controls-volume-slider {
+    background-color: #D3D3D3;
+    border-radius: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: #808080;
+    border-radius: 50%;
+}
+
+button {
+    top: 40%;
+    position: relative;
+    font-size: 14px;
+    letter-spacing: 3px;
+    height: 3.93em;
+    padding: 0 3em;
+    border: none;
+    background-color:#D3D3D3;
+    color:#2D2D2D;
+    text-transform: uppercase;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+button::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    height: 0px;
+    width: 100%;
+    background: rgb(97, 97, 97);
+    background: linear-gradient(90deg, rgb(61, 60, 60) 20%, rgb(33, 32, 32) 100%);
+    transition: 0.2s;
+}
+
+button:hover {
+    color:#FBAFDA;
+    cursor: pointer;
+}
+
+button .label {
+    position: relative;
+}
+
+button .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 3em;
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+button:hover::before {
+    height: 100%;
+}
+
+button:hover .icon {
+    top: 7px;
+    opacity: 1;
+}
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 3rem;
+        position: relative;
+    }
+
+    h3 {
+        font-size: 2rem;
+        position: relative;
+    }
+
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    h1 {
+        font-size: 4rem;
+        position: relative;
+    }
+
+    h3 {
+        font-size: 3rem;
+        position: relative;
+        
+    }
+    .lyrics-1{
+        font-size: 15px;
+    }
+}
